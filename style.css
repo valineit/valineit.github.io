@@ -1,12 +1,12 @@
 div.links{
-    width:400px;
+    width:30%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 50px;
 }
 
 .content{
-    width:400px;
+    width:30%;
     margin: 0 auto;
     font-family:BIZ UD明朝;
     margin-bottom: 50px;
@@ -25,7 +25,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 400px;
+    width: 30%;
     padding: 10px;
     box-sizing: border-box;
     font-family: serif;
@@ -35,10 +35,5 @@ header{
 
 footer{
     text-align: center;
-    widrh:400px;
-}
-
-footer input{
-    margin-left: 10px;
-    width: 130px;
+    widrh:30%;
 }
