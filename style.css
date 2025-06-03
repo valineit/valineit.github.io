@@ -17,22 +17,24 @@ a{
     color:rgb(7, 3, 31);
 }
 
-html,body{
+html{
     background-color: rgb(208, 210, 211);
+      display: flex;
+  justify-content: center;
+}
+body{
+    background-color: rgb(208, 210, 211);
+        width:400px;
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: serif;
     text-align: center;
+    padding: 10px;
+    font-family: serif;
+    width:400px;
 }
 
 footer{
     text-align: center;
-    widrh:100%;
+    width:400px;
 }
