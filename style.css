@@ -6,7 +6,6 @@ div.links{
 }
 
 .content{
-    font-size:10em;
     width:400px;
     margin: 0 auto;
     font-family:BIZ UD明朝;
@@ -26,7 +25,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 400px;
     padding: 10px;
     box-sizing: border-box;
     font-family: serif;
