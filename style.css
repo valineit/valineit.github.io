@@ -25,7 +25,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 100%;
     padding: 10px;
     box-sizing: border-box;
     font-family: serif;
@@ -34,5 +34,5 @@ header{
 
 footer{
     text-align: center;
-    widrh:30%;
+    widrh:100%;
 }
