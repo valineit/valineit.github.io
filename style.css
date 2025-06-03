@@ -29,8 +29,7 @@ header{
     padding: 10px;
     box-sizing: border-box;
     font-family: serif;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 footer{
