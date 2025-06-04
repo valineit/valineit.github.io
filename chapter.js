@@ -12,7 +12,7 @@ async function chapter(chapterFile,chapterId){
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, 'text/html');
 
-    const extracted = doc.querySelector(chapterId);
+    const extracted = doc.querySelector(`.${chapterId}`);
     if (extracted) {
       document.getElementById("content").innerHTML = extracted.innerHTML;
     } else {
