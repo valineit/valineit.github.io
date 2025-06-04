@@ -6,7 +6,7 @@ const chapterContent = {
 
 async function chapter(chapterFile,chapterId){
   try {
-    const res = await fetch(chapterFile);
+    const res = await fetch(`${chapterFile}.html`);
     const htmlText = await res.text();
 
     const parser = new DOMParser();
