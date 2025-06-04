@@ -38,3 +38,10 @@ footer{
     text-align: center;
     width:360px;
 }
+
+button {
+    background-color: #181818;
+    color:white;
+    border-radius: 7px;
+    font-family: BIZ UD明朝;
+}
