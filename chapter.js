@@ -10,7 +10,7 @@ async function chapter(chapterFile,chapterId){
     const htmlText = await res.text();
 
     const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlText, 'text/html');
+    const doc = parser.parseFromString(htmlText,'text/html');
 
     const extracted = doc.querySelector(`#${chapterId}`);
     if (extracted) {
