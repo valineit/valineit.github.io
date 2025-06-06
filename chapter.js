@@ -1,9 +1,11 @@
 const params = new URLSearchParams(window.location.search);
-console.log(params);
-const openChapter = params.get('chapter');
-console.log(openChapter);
-if(chapter){
-  chapter(openChapter);
+
+const openFile = params.get('p');
+const openChapter = params.get('c');
+
+//-URLに、XXX.html?p=(ページ番号)&c=(チャプター番号)と記載する-
+if(openFile && chapter){
+  chapter(openFile,openChapter);
 }
 
 async function chapter(chapterFile,chapterId){
