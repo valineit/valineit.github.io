@@ -6,8 +6,10 @@ const chapterContent = {
 
 async function chapter(chapterFile,chapterId){
   try {
-    const res = await fetch(`chapters/${chapterFile}.html`).trim("%20");
+    const res = await fetch(`chapters/${chapterFile}.html`);
     const htmlText = await res.text();
+    console.log(res);
+    console.log(chapterFile,chapterId);
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText,'text/html');
