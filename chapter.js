@@ -6,7 +6,7 @@ const chapterContent = {
 
 async function chapter(chapterFile,chapterId){
   try {
-    const res = await fetch(`chapters/${chapterFile}.html`).trim( );
+    const res = await fetch(`chapters/${chapterFile}.html`).trim("%20");
     const htmlText = await res.text();
 
     const parser = new DOMParser();
