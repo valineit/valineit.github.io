@@ -39,15 +39,15 @@ async function pageOpen(chapterFile,chapterId){
     const parser=new DOMParser();
     const doc=parser.parseFromString(htmlText,'text/html');
 
-    const pagelinks = "pagelinks"
+    console.log(doc.body.innerHTML); // デバッグ用
 
     const extracted=doc.querySelector(`[id="${chapterId}"]`);
-    const pagelink=doc.querySelector(`[id="${pagelinks}"]`);
-    const pageh=doc.querySelector(`[id="pageh1"]`);
+    const pagelinks=doc.querySelector(`[id="pagelinks"]`);
+    const pageh1=doc.querySelector(`[id="pageh1"]`);
     if (extracted) {
       document.getElementById("content").innerHTML=extracted.innerHTML;
-      document.getElementById("links").innerHTML=pagelink.innerHTML;
-      document.getElementById("h1").innerHTML=pageh.innerHTML;
+      document.getElementById("links").innerHTML=pagelinks.innerHTML;
+      document.getElementById("h1").innerHTML=pageh1.innerHTML;
     } else {
       console.error("指定の要素が見つかりませんでした");
     }
