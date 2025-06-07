@@ -8,7 +8,7 @@ const openChapter = params.get('c');
 
 //-URLに、XXX.html?p=(ページ番号)&c=(チャプター番号)と記載する-
 if(openFile && chapter){
-  chapter(openFile,openChapter);
+  pageOpen(openFile,openChapter);
 }
 
 async function chapter(chapterFile,chapterId){
