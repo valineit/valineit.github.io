@@ -22,6 +22,7 @@ async function chapter(chapterFile,chapterId){
     const extracted=doc.querySelector(`[id="${chapterId}"]`);
     if (extracted) {
       document.getElementById("content").innerHTML=extracted.innerHTML;
+      history.replaceState(null,'',`?p=${chapterFile}&c=${chapterId}`);
     } else {
       console.error("指定の要素が見つかりませんでした");
     }
@@ -48,6 +49,7 @@ async function pageOpen(chapterFile,chapterId){
       document.getElementById("content").innerHTML=extracted.innerHTML;
       document.getElementById("links").innerHTML=pagelinks.innerHTML;
       document.getElementById("h1").innerHTML=pageh1.innerHTML;
+      history.replaceState(null,'',`?p=${chapterFile}&c=${chapterId}`);
     } else {
       console.error("指定の要素が見つかりませんでした");
     }
