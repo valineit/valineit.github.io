@@ -39,9 +39,9 @@ async function pageOpen(chapterFile,chapterId){
     const parser=new DOMParser();
     const doc=parser.parseFromString(htmlText,'text/html');
 
-    const links=doc.querySelector(`[id="links"]`)
     const extracted=doc.querySelector(`[id="${chapterId}"]`);
-    const h1=doc.querySelector(`[id="h1"]`)
+    const links=doc.querySelector(`[id="pagelinks"]`)
+    const h1=doc.querySelector(`[id="pageh1"]`)
     if (extracted) {
       document.getElementById("content").innerHTML=extracted.innerHTML;
       document.getElementById("links").innerHTML=links.innerHTML;
@@ -51,8 +51,6 @@ async function pageOpen(chapterFile,chapterId){
     }
   } catch (err) {
     console.error("読み込みエラー:", err);
-    console.error(doc);
-    console.error(extracted,links,h1);
   }
 
 }
