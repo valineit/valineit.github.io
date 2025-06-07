@@ -42,12 +42,13 @@ async function pageOpen(chapterFile,chapterId){
     const extracted=doc.querySelector(`[id="${chapterId}"]`);
     const links=doc.querySelector(`[id="links"]`)
     const h1=doc.querySelector(`[id="h1"]`)
-    if (extracted,links) {
+    if (extracted) {
       document.getElementById("content").innerHTML=extracted.innerHTML;
       document.getElementById("links").innerHTML=links.innerHTML;
       document.getElementById("h1").innerHTML=h1.innerHTML;
     } else {
       console.error("指定の要素が見つかりませんでした");
+      console.error(extracted,links,h1);
     }
   } catch (err) {
     console.error("読み込みエラー:", err);
