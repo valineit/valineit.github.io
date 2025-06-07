@@ -40,12 +40,12 @@ async function pageOpen(chapterFile,chapterId){
     const doc=parser.parseFromString(htmlText,'text/html');
 
     const extracted=doc.querySelector(`[id="${chapterId}"]`);
-    const links=doc.querySelector(`[id="pagelinks"]`)
-    const h1=doc.querySelector(`[id="pageh1"]`)
+    const pagelinks=doc.querySelector(`[id="pagelinks"]`)
+    const pageh1=doc.querySelector(`[id="pageh1"]`)
     if (extracted) {
       document.getElementById("content").innerHTML=extracted.innerHTML;
-      document.getElementById("links").innerHTML=links.innerHTML;
-      document.getElementById("h1").innerHTML=h1.innerHTML;
+      document.getElementById("links").innerHTML=pagelinks.innerHTML;
+      document.getElementById("h1").innerHTML=pageh1.innerHTML;
     } else {
       console.error("指定の要素が見つかりませんでした");
     }
