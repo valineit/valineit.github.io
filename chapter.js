@@ -48,10 +48,11 @@ async function pageOpen(chapterFile,chapterId){
       document.getElementById("h1").innerHTML=h1.innerHTML;
     } else {
       console.error("指定の要素が見つかりませんでした");
-      console.error(extracted,links,h1);
     }
   } catch (err) {
     console.error("読み込みエラー:", err);
+    console.error(doc);
+    console.error(extracted,links,h1);
   }
 
 }
