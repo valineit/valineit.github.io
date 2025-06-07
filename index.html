@@ -6,19 +6,22 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="chapter.js"></script>
             <title>valineit</title>
         </head>
 
     <header>
-            <h1>valineit
+            <h1 id="h1">valineit
     </header>
 
+    <div class="content" id="content">
+    </div>
+
     <div class="links" id="links">
-        <!--XXX.html?P=(ページ数)&C=1としてください。-->
+        <!--XXX.html?P=(ページ名)&C=1としてください。-->
         <a href="page1.html?p=01&c=01" target="_self">page1</a>
         <a href="page2.html?p=02&c=01" target="_self">page2</a>
-        <a href="page3.html?p=03&c=01" target="_self">page3</a>
-
+        <a href=# onclick="pageOpen('01','03')">page3</a>
 
     </div>
 
