@@ -39,7 +39,7 @@ async function pageOpen(chapterFile,chapterId){
     const parser=new DOMParser();
     const doc=parser.parseFromString(htmlText,'text/html');
 
-    console.log(doc.body.innerHTML); // デバッグ用
+    console.log(doc.innerHTML); // デバッグ用
 
     const extracted=doc.querySelector(`[id="${chapterId}"]`);
     const pagelinks=doc.querySelector(`[id="pagelinks"]`);
