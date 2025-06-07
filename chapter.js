@@ -40,8 +40,8 @@ async function pageOpen(chapterFile,chapterId){
     const doc=parser.parseFromString(htmlText,'text/html');
 
     const extracted=doc.querySelector(`[id="${chapterId}"]`);
-    const pagelinks=doc.querySelector(`[id="pagelinks"]`)
-    const pageh1=doc.querySelector(`[id="pageh1"]`)
+    const pagelinks=doc.querySelector(`[id="pagelinks"]`);
+    const pageh1=doc.querySelector(`[id="pageh1"]`);
     if (extracted) {
       document.getElementById("content").innerHTML=extracted.innerHTML;
       document.getElementById("links").innerHTML=pagelinks.innerHTML;
