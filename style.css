@@ -45,3 +45,7 @@ button {
     border-radius: 7px;
     font-family: BIZ UD明朝;
 }
+
+small {
+    color:rgb(12, 77, 15);
+}
